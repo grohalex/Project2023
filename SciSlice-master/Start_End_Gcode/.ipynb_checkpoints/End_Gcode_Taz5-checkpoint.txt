@@ -1,0 +1,9 @@
+M104 S0                     ;extruder heater off
+M140 S0                     ;heated bed heater off (if you have it)
+                                   ;relative positioning
+G90
+G1 Y200.0 F2000      ;move X/Y to min endstops, so the head is out of the way
+
+M84                         ;steppers off
+G90  
+M30
