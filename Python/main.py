@@ -61,7 +61,7 @@ class MyProblem(ElementwiseProblem):
 
 
 # Filepath management
-cwd = Path.cwd()
+cwd = Path.cwd().parent
 mesh_dir = cwd.joinpath("MOEA_meshes", "smallSquare7x7")  # adjust the dir here
 inf_file = str(mesh_dir.stem) + '-infill.msh'
 mesh_inp = mesh_dir / inf_file  # mesh input file
@@ -87,7 +87,7 @@ algorithm = NSGA2(
 
 
 # define the termination criterion
-termination = get_termination("n_gen", 100)
+termination = get_termination("n_gen", 10)
 
 
 # solve the MOP

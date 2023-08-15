@@ -1,4 +1,10 @@
 # Boundary condition functions setup for FEniCS
+import numpy as np
+import meshio
+import gmsh
+from dolfin import *
+from ufl import nabla_div
+
 
 # boundary connection setup
 tol = 1
